@@ -1,0 +1,7 @@
+services:
+  ai-notes:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      ENABLE_TEST_HOOKS: "1"

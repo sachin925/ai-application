@@ -1,0 +1,21 @@
+{
+  "name": "ai-notes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered notes app designed as a friendly target for test automation",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "playwright test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0"
+  }
+}

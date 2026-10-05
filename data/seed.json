@@ -1,0 +1,57 @@
+{
+  "users": [
+    {
+      "id": "user_demo",
+      "name": "Demo User",
+      "email": "demo@ainotes.app",
+      "password": "password123"
+    }
+  ],
+  "notes": [
+    {
+      "id": "note_seed_1",
+      "userId": "user_demo",
+      "title": "Weekly groceries",
+      "body": "Milk, eggs, spinach, sourdough, oat milk, coffee beans, olive oil.",
+      "tags": ["personal", "shopping"],
+      "createdAt": "2026-09-01T09:00:00.000Z",
+      "updatedAt": "2026-09-01T09:00:00.000Z"
+    },
+    {
+      "id": "note_seed_2",
+      "userId": "user_demo",
+      "title": "Q4 planning meeting",
+      "body": "Draft agenda: roadmap review, budget, hiring plan. Send invites by Friday.",
+      "tags": ["work", "meetings"],
+      "createdAt": "2026-09-02T14:30:00.000Z",
+      "updatedAt": "2026-09-03T10:15:00.000Z"
+    },
+    {
+      "id": "note_seed_3",
+      "userId": "user_demo",
+      "title": "Books to read",
+      "body": "The Design of Everyday Things; Refactoring UI; Invisible Women.",
+      "tags": ["personal", "reading"],
+      "createdAt": "2026-09-03T18:00:00.000Z",
+      "updatedAt": "2026-09-03T18:00:00.000Z"
+    },
+    {
+      "id": "note_seed_4",
+      "userId": "user_demo",
+      "title": "Trip itinerary: Kyoto",
+      "body": "Day 1: Arashiyama bamboo grove, Tenryu-ji temple. Day 2: Fushimi Inari early, Nishiki market lunch. Day 3: day trip to Nara.",
+      "tags": ["travel"],
+      "createdAt": "2026-09-04T08:00:00.000Z",
+      "updatedAt": "2026-09-04T08:00:00.000Z"
+    },
+    {
+      "id": "note_seed_5",
+      "userId": "user_demo",
+      "title": "Test automation ideas",
+      "body": "Practice targets: dynamic tables, two-step delete confirmations, async AI summaries with loading states, search with debounce.",
+      "tags": ["work", "qa"],
+      "createdAt": "2026-09-05T11:00:00.000Z",
+      "updatedAt": "2026-09-05T11:00:00.000Z"
+    }
+  ]
+}

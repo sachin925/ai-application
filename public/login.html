@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Notes — Log in</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <main class="auth-page">
+    <form class="card auth-card" data-testid="login-form">
+      <h1>AI Notes</h1>
+      <p class="muted">Sign in to your notes</p>
+      <label>
+        Email
+        <input type="email" name="email" data-testid="email-input" required autocomplete="username" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" data-testid="password-input" required autocomplete="current-password" />
+      </label>
+      <p class="error" data-testid="login-error" hidden></p>
+      <button type="submit" data-testid="login-button">Log in</button>
+      <p class="muted small">Demo account: demo@ainotes.app / password123</p>
+    </form>
+  </main>
+  <script src="/static/login.js" defer></script>
+</body>
+</html>

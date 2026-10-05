@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Notes</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>AI Notes</h1>
+    <div class="topbar-user">
+      <span class="muted" data-testid="user-email"></span>
+      <button type="button" class="secondary" data-testid="logout-button">Log out</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="card">
+      <h2 data-testid="form-heading">Create note</h2>
+      <form data-testid="note-form">
+        <label>
+          Title
+          <input type="text" name="title" data-testid="note-title-input" required />
+        </label>
+        <label>
+          Body
+          <textarea name="body" rows="6" data-testid="note-body-input"></textarea>
+        </label>
+        <label>
+          Tags (comma separated)
+          <input type="text" name="tags" data-testid="note-tags-input" placeholder="work, ideas" />
+        </label>
+        <div class="button-row">
+          <button type="submit" data-testid="note-save-button">Save note</button>
+          <button type="button" class="secondary" data-testid="cancel-edit-button" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section>
+      <div class="toolbar">
+        <input type="search" placeholder="Search notes..." data-testid="search-input" aria-label="Search notes" />
+        <select data-testid="sort-select" aria-label="Sort notes">
+          <option value="updated-desc">Newest first</option>
+          <option value="updated-asc">Oldest first</option>
+          <option value="title-asc">Title A–Z</option>
+          <option value="title-desc">Title Z–A</option>
+        </select>
+      </div>
+
+      <div class="card summary-card" data-testid="summary-panel" hidden>
+        <h2>AI summary</h2>
+        <p data-testid="summary-loading">Summarizing...</p>
+        <p data-testid="summary-text"></p>
+        <p class="badge verified" data-testid="summary-verified" hidden>Grounded in your note</p>
+        <p class="badge warning" data-testid="summary-warning" hidden></p>
+      </div>
+
+      <p class="empty" data-testid="notes-empty" hidden>No notes found.</p>
+      <div class="notes" data-testid="notes-list"></div>
+    </section>
+  </main>
+
+  <div class="toast" role="status" data-testid="toast" hidden></div>
+
+  <template id="note-template">
+    <article class="card note" data-testid="note-item">
+      <div class="note-head">
+        <h3 data-testid="note-title"></h3>
+        <span class="muted small" data-testid="note-updated"></span>
+      </div>
+      <p data-testid="note-body-preview"></p>
+      <div class="tags" data-testid="note-tags"></div>
+      <div class="button-row">
+        <button type="button" class="secondary" data-testid="note-summarize-button">Summarize</button>
+        <button type="button" class="secondary" data-testid="note-edit-button">Edit</button>
+        <button type="button" class="danger" data-testid="note-delete-button">Delete</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
